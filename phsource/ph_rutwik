@@ -1,0 +1,64 @@
+// Override 1: Indian English r = tap (ɾ), not approximant
+phoneme r
+  liquid rhotic
+  lengthmod 3
+
+  IF thisPh(isWordEnd) THEN
+    ChangePhoneme(@)
+  ELIF nextPhW(isVowel) THEN
+    FMT(r/r)
+  ELSE
+    ChangePhoneme(@)
+  ENDIF
+  ipa ɾ
+endphoneme
+
+// Override 2: Indian English t = dental stop (t̪), not alveolar
+phoneme t
+  vls dnt stp
+  voicingswitch d
+  lengthmod 2
+  Vowelin f1=0  f2=1500 -300 300  f3=-100 80
+  Vowelout f1=0 f2=1500 -300 250  f3=-100 80  rms=20
+
+  IF nextPh(isPause2) THEN
+    WAV(ustop/t_dnt, 35)
+  ENDIF
+  WAV(ustop/t_dnt, 70)
+endphoneme
+
+// Override 3: oU diphthong → pure monophthong /o/
+phoneme oU
+  vwl starttype #o endtype #o
+  ipa o
+  length 200
+  ChangeIfDiminished(@)
+  FMT(vowel/o_2)
+endphoneme
+
+// Override 4: TRAP vowel a = more open /a/, not raised /æ/
+phoneme a
+  vwl starttype #a endtype #a
+  ipa a
+  length 180
+  ChangeIfDiminished(a#)
+  FMT(vowel/a_5)
+endphoneme
+
+// Override 5: STRUT vowel V = more open, toward /a/
+phoneme V
+  vwl starttype #a endtype #@
+  ipa ɐ
+  length 160
+  ChangeIfDiminished(@)
+  FMT(vowel/a#_3)
+endphoneme
+
+// Override 6: NURSE vowel 3: — remove IfNextVowelAppend(r-) to make non-rhotic
+// butter/bird/turn should be bɐtə/bɜːd/tɜːn, not bɐtəɹ/bɜːɹd/tɜːɹn
+phoneme 3:
+  vwl starttype #@ endtype #@
+  length 210
+  ChangeIfDiminished(@)
+  FMT(vowel/3_en)
+endphoneme

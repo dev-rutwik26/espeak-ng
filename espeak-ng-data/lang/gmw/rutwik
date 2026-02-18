@@ -1,0 +1,14 @@
+name Indian English (Rutwik)
+language rutwik 1
+maintainer Rutwik
+status testing
+
+phonemes rutwik
+dictrules 6
+
+stressLength 170 160 200 190 0 0 220 240
+stressAmp  17 17 19 18 19 19 20 19
+
+replace 00 T t[
+replace 00 D d
+replace 00 w v
