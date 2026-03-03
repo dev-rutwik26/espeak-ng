@@ -65,98 +65,6 @@
    ώ   ω
    ʻ   '     // Replace Hawaiian okina to apostrophe FIXME — that should be done globally for all languages
 
-// rutwik_rules_custom - Indian English overrides
-// These will be inserted between en_rules definitions and body
-
-// ================================================================
-// GROUP: er
-// Fix: "er" before a vowel letter should keep r as a separate tap
-// en_rules line 2764: er (A  →  3:r  (correct, but our phoneme r
-// was dropping it). Now that ph_rutwik handles r correctly, we
-// reinforce these rules explicitly.
-// ================================================================
-
-.group er
-     &) er         3
-   @@@) er (_S2de  3
-   @ed) er (_S2d   3
-   ied) er (_S2de  3
-    %C) er (_S3    3
-    mm) er (_      3
-    rn) er (_S2    3
-    er) er (_S2    3
-    ll) er (_S2    %3
-     &) er (_      %3
-    ll) ers (_S3   %3z
-    ss) er (_S2    3
-   all) er (_      3
-    mb) er (_      3
-   &en) er (_S2    3
-   lin) er (_S1    3
-    nc) er (_S1    3
-        er         3:
-        er (A      3:r
-     _) er (A      I2r
-     _) er         3:
-     _) err (A     Er
-     &) er (ing    3:r
-     &) er (A      3:r
-        er (_      3:
-        er (B_     3:
-     &) ere (_     3
-        ere (_     3:
-     &) er (s_     3
-
-// ================================================================
-// GROUP: r
-// Fix: keep r as a tap between vowels (e.g. "very", "sorry", "carry")
-// Override the en_rules rule: e) r (_ → 3  (which drops the r)
-// ================================================================
-
-.group r
-        r          r
-        rr         r
-     _) rh (Y      r
-     _) rw (a      r%U
-     r) r (_
-        r (_N      3
-     C) rr (_N     3
-     @) r (B       @
-     C) rh         r
-        rheu       ru:
-        rhi (n#    raI
-        rhi (z     raI
-     _) rho (d     roU
-     _) rhodo (@   roUd@
-     _) rho (t     roU
-     _) rhu        ru:
-        rhyth      rID
-     _) rm (A      ,A@Em
-        rrhea      r'i@
-        rrhoea     r'i@
-     _) ru (bL01   ru:
-     _) rule (@    ru:l
-     _) run (a     rVn
-     _) run (o     rVn
-  &ant) ry (_S2    ri
-   &an) ry (_S2    ri
-  &ant) ries (_S4  riz
-
-// ================================================================
-// GROUP: th
-// th → t (dental) for Indian English
-// ================================================================
-
-.group th
-        th         T
-     _) the (_     D@
-     _) the (C     D@
-        the (C     D@
-        thi (s_    DIs
-        thi (s     DIs
-        th (e_     D
-        th (A      D
-        th (_      D
 .group a
         a          a
      _) a'         a#
@@ -2833,7 +2741,9 @@ _it_separ) ate (_  @t
         eoes (_    I2oUz
 
 .group er
-     &) er         3
+        er (y      Er      // IndE TOP: very,carry,sorry — before catch-all fires
+        er (A      Er      // IndE TOP: er before vowels — keep e+r separate
+     &) er         Er      // IndE: mid-word er → short e + tap r (not NURSE vowel)
    @@@) er (_S2de  3         // suffix
    @ed) er (_S2d   3         // suffix, adjective
    ied) er (_S2de  3         // suffix
@@ -2971,7 +2881,7 @@ _it_separ) ate (_  @t
      _) er (ud     Er
         er (ve     3:
      s) er (van    3:
-     &) ery (_     @r%i
+     &) ery (_     Er%i    // IndE: very,every → ɛɾɪ not əɾɪ
  @@ell) ery (_     ri
 ?3      ery (_++$w_alt2 @ri
 ?3 @@AC) ery (_     ,e@ri
@@ -4519,6 +4429,8 @@ multip) ly         laI
      _) nurse (B   n3:s
      &) nut (_S3   nVt
      &) nya (_     =nj@
+        n (t      n.
+        n (d      n.
 
 .group ng
         ng         N
@@ -6247,7 +6159,8 @@ multip) ly         laI
     ee) thing      DI2N
    soo) th         D
    soo) th (say    T
-        the (_     D
+        the (_A    di:    
+        the (_     dV     
      &) th (L03_   =T
     ou) thed (_    Dd
         th (en_    D

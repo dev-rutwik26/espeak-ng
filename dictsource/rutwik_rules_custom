@@ -10,35 +10,22 @@
 // ================================================================
 
 .group er
-     &) er         3
-   @@@) er (_S2de  3
-   @ed) er (_S2d   3
-   ied) er (_S2de  3
-    %C) er (_S3    3
-    mm) er (_      3
-    rn) er (_S2    3
-    er) er (_S2    3
-    ll) er (_S2    %3
-     &) er (_      %3
+     &) er (_      %3      // word-end: schwa (non-rhotic)
     ll) ers (_S3   %3z
-    ss) er (_S2    3
    all) er (_      3
     mb) er (_      3
-   &en) er (_S2    3
-   lin) er (_S1    3
+    mm) er (_      3
+    rn) er (_S2    3
+    ss) er (_S2    3
     nc) er (_S1    3
-        er         3:
-        er (A      3:r
-     _) er (A      I2r
-     _) er         3:
+
+        er (y      Er      // KEY: very, carry, sorry — y not in class A
+        er (A      Er      // er before any vowel: keep e+r separate (IndE tap)
+        er (_      3:      // er at end of word context
      _) err (A     Er
-     &) er (ing    3:r
-     &) er (A      3:r
-        er (_      3:
-        er (B_     3:
      &) ere (_     3
         ere (_     3:
-     &) er (s_     3
+        er         3:
 
 // ================================================================
 // GROUP: r
