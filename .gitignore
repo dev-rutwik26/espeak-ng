@@ -202,7 +202,6 @@ emscripten/js/*.js
 
 # espeak-ng-data
 
-dictsource/*_extra
 dictsource/dict_log
 dictsource/dict_phonemes
 dictsource/ru_listx
