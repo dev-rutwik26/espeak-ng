@@ -2743,25 +2743,24 @@ _it_separ) ate (_  @t
 .group er
         er (y      Er      // IndE TOP: very,carry,sorry — before catch-all fires
         er (A      Er      // IndE TOP: er before vowels — keep e+r separate
-     &) er         Er      // IndE: mid-word er → short e + tap r (not NURSE vowel)
+        er (_      @r      // IndE: word-final er → rhotic schwa + tap (player, water)
+     &) er (_      @r      // IndE: Catch-all word-final er
+     &) er         Er      // IndE: mid-word er → short e + tap r
    @@@) er (_S2de  3         // suffix
    @ed) er (_S2d   3         // suffix, adjective
    ied) er (_S2de  3         // suffix
-    %C) er (_S3    3
-    mm) er (_      3
-    rn) er (_S2    3
-    er) er (_S2    3
-    ll) er (_S2    %3
-     &) er (_      %3
-?8   &) er (_      a#        // (temporary because [3] -> [a#] is only for word-final
-    ll) ers (_S3   %3z
+    %C) er (_S3    @r
+    mm) er (_      @r
+    rn) er (_S2    @r
+    er) er (_S2    @r
+    ll) er (_S2    @r
 ?8  %C) ers (_S4   a#z
-    ss) er (_S2    3
-   all) er (_      3
-    mb) er (_      3
-   &en) er (_S2    3
-   lin) er (_S1    3
-    nc) er (_S1    3
+    ss) er (_S2    @r
+   all) er (_      @r
+    mb) er (_      @r
+   &en) er (_S2    @r
+   lin) er (_S1    @r
+    nc) er (_S1    @r
         er         3:
         er (A      3:r
      _) er (A      I2r
@@ -2890,7 +2889,6 @@ _it_separ) ate (_  @t
     _x) er (o      i@r
     _z) er (o+     i@r
     _C) er (o_     i@r
-        er (rA     E
         err (_N    e@
 
 .group es

@@ -1,37 +1,31 @@
+// ================================================================
+// ph_rutwik — Indian English (IndE) phoneme definitions
+// Based on OED Indian English model (Gargesh 2008, Wiltshire 2020)
+// ================================================================
+
+
+// ── RHOTICS ─────────────────────────────────────────────────────
+// IndE: /r/ is a tap or trill, NEVER the British approximant
+// OED: "postvocalic /r/ which is often trilled or tapped"
+
 phoneme r
   liquid rhotic
   lengthmod 3
-
-  IF prevPh(isNotVowel) AND NOT prevPh(isPause) THEN
-    CALL base1/r
-  ELSE
-    ipa ɾ
-    FMT(r/r)
-  ENDIF
+  ipa ɾ
+  FMT(r/r)          // always tap, regardless of position
 endphoneme
 
 
-phoneme aa
-  vwl starttype #a endtype #a
-  ipa ə
-  length 110
-  ChangeIfDiminished(@)
-  FMT(vowel/a#)
-endphoneme
-
-phoneme a:
-  vwl starttype #a endtype #a
-  ipa aː
-  length 300
-  FMT(vowel/a_2)
-endphoneme
+// ── DENTAL STOPS (for English /θ/ → /t̪/ and /ð/ → /d̪/) ────────
+// OED: "/ð/ and /θ/ sound like dentalized /d/ and /t/ in IndE"
 
 phoneme t[
   vls dnt stp
   voicingswitch d[
   lengthmod 2
-  Vowelin f1=0  f2=1400 -300 -200  f3=-100 80
-  Vowelout f1=0 f2=1400 -300 -200  f3=-100 80 brk
+  ipa t̪
+  Vowelin  f1=0  f2=1400 -300 -200  f3=-100 80
+  Vowelout f1=0  f2=1400 -300 -200  f3=-100 80 brk
   WAV(ustop/t_short)
 endphoneme
 
@@ -39,7 +33,126 @@ phoneme d[
   vcd dnt stp
   voicingswitch t[
   lengthmod 5
-  Vowelin f1=1  f2=1400 -300 -200  f3=-100 80
-  Vowelout f1=1 f2=1400 -300 -200  f3=-100 80
+  ipa d̪
+  Vowelin  f1=1  f2=1400 -300 -200  f3=-100 80
+  Vowelout f1=1  f2=1400 -300 -200  f3=-100 80
   FMT(d/dr)
 endphoneme
+
+
+// ── RETROFLEX STOPS /ʈ/ and /ɖ/ ─────────────────────────────────
+// OED: "/t/ and /d/ in BrE are realized as retroflex /ʈ/ and /ɖ/ in IndE"
+// This OVERRIDES the English alveolar t and d for ALL words.
+// Retroflex: tongue tip curled back, touching behind alveolar ridge.
+// F2 transition is higher (~1800 Hz) compared to alveolar (~1500 Hz).
+
+phoneme t
+  vls rfx stp
+  lengthmod 2
+  ipa ʈ
+  voicingswitch d
+  Vowelin  f1=0  f2=1800 -300 300  f3=-400 80
+  Vowelout f1=0  f2=1800 -300 250  f3=-400 80  rms=20 colr=2
+  WAV(ustop/t_short)
+endphoneme
+
+phoneme d
+  vcd rfx stp
+  lengthmod 5
+  ipa ɖ
+  voicingswitch t
+  Vowelin  f1=1  f2=1800 -300 300  f3=-400 80
+  Vowelout f1=1  f2=1800 -300 300  f3=-400 80  colr=2
+
+  IF PreVoicing THEN
+    FMT(d/xdr)
+  ENDIF
+
+  IF nextPh(isPause2) THEN
+    FMT(d/d_) addWav(x/d_)
+  ENDIF
+
+  FMT(d/dr) addWav(x/d)
+endphoneme
+
+
+// ── VOWELS ──────────────────────────────────────────────────────
+
+// schwa / commA — used for unstressed vowels
+// OED: schwa retained, but function words not reduced as in BrE
+phoneme aa
+  vwl starttype #a endtype #a
+  ipa ə
+  length 120
+  ChangeIfDiminished(@)
+  FMT(vowel/a#)
+endphoneme
+
+// BATH / PALM — long open vowel (ɑː)
+// OED: "long, unrounded, open but often central"
+phoneme a:
+  vwl starttype #a endtype #a
+  ipa ɑː
+  length 280
+  FMT(vowel/a_2)
+endphoneme
+
+// STRUT / schwa-ʌ merger
+// OED: "/ʌ-ə/ contrast simply to /ə/ in IndE"
+// Using slightly raised central vowel (more ɐ quality)
+phoneme V
+  vwl starttype #@ endtype #@
+  ipa ə
+  length 130
+  FMT(vowel/V_3)
+endphoneme
+
+// FOOT — short back rounded vowel
+// OED: "ʊ includes /u/" — broader back quality than BrE
+phoneme U
+  vwl starttype #u endtype #u
+  ipa ʊ
+  length 140
+  FMT(vowel/uu_bck)    // cleaner short back u, borrowed from Hindi
+endphoneme
+
+// LOT / CLOTH — merged, open-mid back rounded
+// OED: "lot-thought contrast often not clear-cut in IndE"
+phoneme O
+  vwl starttype #o endtype #o
+  ipa ɔ
+  length 140
+  FMT(vowel/0)          // open-mid O quality (as in Hindi)
+endphoneme
+
+// ── DIPHTHONGS — stronger second elements in IndE ────────────────
+// OED: "second elements of pride and mouth are not as weak as in BrE"
+
+phoneme aI
+  vwl lng starttype #a endtype #i
+  ipa aɪ
+  length 230
+  lng
+  FMT(vdiph/ai)
+endphoneme
+
+phoneme aU
+  vwl lng starttype #a endtype #u
+  ipa aʊ
+  length 230
+  lng
+  FMT(vdiph/au)
+endphoneme
+
+// ── RHOTACIZED SCHWA ─────────────────────────────────────────────
+// IndE is rhotic — word-final "er" as in player/water/teacher
+// sounds like schwa + tap r, e.g. "player" → /pleɪər/
+
+phoneme @r
+  vwl starttype #@ endtype #@
+  ipa ər
+  length 180
+  FMT(vowel/a#_3)
+  addWav(r3/rx, 70)
+endphoneme
+
