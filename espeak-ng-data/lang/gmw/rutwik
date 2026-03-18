@@ -12,3 +12,16 @@ stressAmp  17 17 19 18 19 19 20 19
 replace 00 T t[
 replace 00 D d[
 replace 00 w v
+
+// Optional: Merge V (STRUT) and @ (Schwa)
+replace 00 V @
+
+// Rhotic Map for Piper: Ensure all non-rhotic vowels output a rhotic suffix
+replace 00 A@ A:r
+replace 00 e@ e@r
+replace 00 I@ I@r
+replace 00 U@ U@r
+replace 00 O@ O@r
+replace 00 3: 3r
+replace 00 3 @r
+replace 00 V @  // (Optional: Merge STRUT into Schwa if desired for IndE)
