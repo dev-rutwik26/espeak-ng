@@ -43,3 +43,677 @@ phoneme d[
   Vowelout f1=1 f2=1400 -300 -200  f3=-100 80
   FMT(d/dr)
 endphoneme
+
+
+// ============================================================
+// ph_rutwik — Indian English phoneme definitions
+// Covers all phonemes found in rutwik_extra word list
+// ============================================================
+
+
+// ============================================================
+// SECTION 1: VOWELS — SHORT
+// ============================================================
+
+// TEST: kunal k'unal | gopitha gOp'It[a | sanjivni s'andZIvni:
+phoneme a
+  vwl starttype #a endtype #a
+  ipa a
+  length 80
+  FMT(vowel/a)
+endphoneme
+
+// TEST: prachi pr'aatSi: | rutwik r'aatvIk | abhishek aabIS'eIk
+phoneme aa
+  vwl starttype #a endtype #a
+  ipa ə
+  length 110
+  ChangeIfDiminished(@)
+  FMT(vowel/a#)
+endphoneme
+
+// TEST: diwali dIv'a:li: | rutwik r'aatvIk | thiv t['Iv
+phoneme I
+  vwl starttype #i endtype #i
+  ipa ɪ
+  length 80
+  FMT(vowel/I)
+endphoneme
+
+// TEST: arjun 'a:dZun | kunal k'unal | bharathushan barat[uS'a:n
+phoneme u
+  vwl starttype #u endtype #u
+  ipa ʊ
+  length 80
+  FMT(vowel/u)
+endphoneme
+
+// TEST: saptahotre saptaah'oUta | owynn 'oUIn | kaushali kaUS'a:li:
+phoneme U
+  vwl starttype #u endtype #u
+  ipa ʊ
+  length 80
+  FMT(vowel/U)
+endphoneme
+
+// TEST: jeylani dZ'EIlaani: | sunel s'u:nEl | helasa h'Elaasa:
+phoneme E
+  vwl starttype #e endtype #e
+  ipa ɛ
+  length 100
+  FMT(vowel/e_mid)
+endphoneme
+
+// TEST: gopitha gOp'It[a | shriamogha SraIaamOg'a: | yashodayashase jaSOdaajaaS'eIz
+phoneme O
+  vwl starttype #o endtype #o
+  ipa ɔ
+  length 100
+  FMT(vowel/o_mid)
+endphoneme
+
+
+// ============================================================
+// SECTION 2: VOWELS — LONG
+// ============================================================
+
+// TEST: arjun 'a:dZun | diwali dIv'a:li: | bharathushan barat[uS'a:n
+phoneme a:
+  vwl starttype #a endtype #a
+  ipa aː
+  length 300
+  FMT(vowel/a_2)
+endphoneme
+
+// TEST: prachi pr'aatSi: | diwali dIv'a:li: | jeylani dZ'EIlaani:
+phoneme i:
+  vwl starttype #i endtype #i
+  ipa iː
+  length 200
+  FMT(vowel/i_long)
+endphoneme
+
+// TEST: suyoug s'u:ju:g | sunel s'u:nEl | ganeshkumar gaan'eISku:ma:
+phoneme u:
+  vwl starttype #u endtype #u
+  ipa uː
+  length 200
+  FMT(vowel/u_long)
+endphoneme
+
+// TEST: flor flO: | reshwar r'ESvO: | yuveneshwaran j'u:vaanESvO:an
+phoneme O:
+  vwl starttype #o endtype #o
+  ipa ɔː
+  length 200
+  FMT(vowel/o_long)
+endphoneme
+
+// TEST: surveysan s'3:veIzan | neranjini n'3:a:ndZi:ni: | kshiranayak tSS'3:aana:jak
+phoneme 3:
+  vwl starttype #@ endtype #@
+  ipa ɜː
+  length 200
+  FMT(vowel/3_long)
+endphoneme
+
+
+// ============================================================
+// SECTION 3: DIPHTHONGS
+// ============================================================
+
+// TEST: abhishek aabIS'eIk | lakshay laatSS'eI | ganeshkumar gaan'eISku:ma:
+phoneme eI
+  vwl starttype #e endtype #i
+  ipa eɪ
+  length 180
+  FMT(diphthong/eI)
+endphoneme
+
+// TEST: saptahotre saptaah'oUta | owynn 'oUIn | jootheesan dZ'oUaat[i:zan
+phoneme oU
+  vwl starttype #o endtype #u
+  ipa oʊ
+  length 180
+  FMT(diphthong/oU)
+endphoneme
+
+// TEST: ziyan z'IaIan | yishai j'ISaI | shriamogha SraIaamOg'a:
+phoneme aI
+  vwl starttype #a endtype #i
+  ipa aɪ
+  length 180
+  FMT(diphthong/aI)
+endphoneme
+
+// TEST: kaushali kaUS'a:li: | kowsigan k'oUaUzIgan | yojitha jaUdZ'i:t[a
+phoneme aU
+  vwl starttype #a endtype #u
+  ipa aʊ
+  length 180
+  FMT(diphthong/aU)
+endphoneme
+
+// TEST: ziyan z'IaIan | thayashana t['eIa:Sa:na | shriamogha SraIaamOg'a:
+phoneme Ia
+  vwl starttype #i endtype #a
+  ipa ɪə
+  length 180
+  FMT(diphthong/Ia)
+endphoneme
+
+
+// ============================================================
+// SECTION 4: NASALS
+// ============================================================
+
+// TEST: aranamuthan araan'a:maat[an | mangaraj maNgaar'a:dZ | ganeshkumar gaan'eISku:ma:
+phoneme m
+  vcd blb nas
+  ipa m
+  lengthmod 4
+  Vowelin  f1=0 f2=1000 -500 -300  f3=-200 80
+  Vowelout f1=0 f2=1000 -500 -300  f3=-200 80 brk
+  FMT(nasal/m)
+endphoneme
+
+// TEST: arjun 'a:dZun | kunal k'unal | ziyan z'IaIan
+phoneme n
+  vcd alv nas
+  ipa n
+  lengthmod 4
+  Vowelin  f1=0 f2=1500 -300 -200  f3=-100 80
+  Vowelout f1=0 f2=1500 -300 -200  f3=-100 80 brk
+  FMT(nasal/n)
+endphoneme
+
+// TEST: mangaraj maNgaar'a:dZ | thanvesh t['aNvS | rang r'aN
+phoneme N
+  vcd vel nas
+  ipa ŋ
+  lengthmod 4
+  Vowelout f1=0 f2=2300  300  400  f3=0 80 brk
+  FMT(nasal/ng)
+endphoneme
+
+
+// ============================================================
+// SECTION 5: STOPS — PLAIN (unaspirated)
+// ============================================================
+
+// TEST: prachi pr'aatSi: | saptahotre saptaah'oUta | gopitha gOp'It[a
+phoneme p
+  vls blb stp
+  voicingswitch b
+  lengthmod 2
+  Vowelin  f1=0 f2=1000 -500 -300  f3=-200 80
+  Vowelout f1=0 f2=1000 -500 -300  f3=-200 80 brk
+  WAV(ustop/p)
+endphoneme
+
+// TEST: abhishek aabIS'eIk | bharathushan barat[uS'a:n | mageshbabu maadZESb'a:bu:
+phoneme b
+  vcd blb stp
+  voicingswitch p
+  lengthmod 5
+  Vowelin  f1=1 f2=1000 -500 -300  f3=-200 80
+  Vowelout f1=1 f2=1000 -500 -300  f3=-200 80
+  FMT(b/b)
+endphoneme
+
+// TEST: rutwik r'aatvIk | ratnakundala ranaak'u:ndaala | madisson m'adIsan
+phoneme t
+  vls alv stp
+  voicingswitch d
+  lengthmod 2
+  Vowelin  f1=0 f2=1700 -300 -150  f3=-100 80
+  Vowelout f1=0 f2=1700 -300 -150  f3=-100 80 brk
+  WAV(ustop/t)
+endphoneme
+
+// TEST: ratnakundala ranaak'u:ndaala | madisson m'adIsan | surendaran s'urEndran
+phoneme d
+  vcd alv stp
+  voicingswitch t
+  lengthmod 5
+  Vowelin  f1=1 f2=1700 -300 -150  f3=-100 80
+  Vowelout f1=1 f2=1700 -300 -150  f3=-100 80
+  FMT(d/d)
+endphoneme
+
+// TEST: kunal k'unal | rutwik r'aatvIk | abhishek aabIS'eIk
+phoneme k
+  vls vel stp
+  voicingswitch g
+  lengthmod 2
+  Vowelin  f1=0 f2=2300  300  400  f3=0 80
+  Vowelout f1=0 f2=2300  300  400  f3=0 80 brk
+  WAV(ustop/k)
+endphoneme
+
+// TEST: suyoug s'u:ju:g | mangaraj maNgaar'a:dZ | gopitha gOp'It[a
+phoneme g
+  vcd vel stp
+  voicingswitch k
+  lengthmod 5
+  Vowelin  f1=1 f2=2300  300  400  f3=0 80
+  Vowelout f1=1 f2=2300  300  400  f3=0 80
+  FMT(g/g)
+endphoneme
+
+
+// ============================================================
+// SECTION 6: DENTAL STOPS (Indian English retroflex-dental)
+// ============================================================
+
+// TEST: thiv t['Iv | bharathushan barat[uS'a:n | aranamuthan araan'a:maat[an
+phoneme t[
+  vls dnt stp
+  voicingswitch d[
+  lengthmod 2
+  Vowelin  f1=0 f2=1400 -300 -200  f3=-100 80
+  Vowelout f1=0 f2=1400 -300 -200  f3=-100 80 brk
+  WAV(ustop/t_short)
+endphoneme
+
+// TEST: raktambaradhara raktamb'a:a:d[a:ra | dhakshinraj d['a:tSSInra:dZ | susiddhida s'u:Si:d[aIda
+phoneme d[
+  vcd dnt stp
+  voicingswitch t[
+  lengthmod 5
+  Vowelin  f1=1 f2=1400 -300 -200  f3=-100 80
+  Vowelout f1=1 f2=1400 -300 -200  f3=-100 80
+  FMT(d/dr)
+endphoneme
+
+
+// ============================================================
+// SECTION 7: ASPIRATED STOPS — Indian English khas feature
+// Aspiration modelled by adding breathiness after release
+// ============================================================
+
+// TEST: viphul vaIph'u:l | rambhaphalaprit rambhaphalapr'i: | ruphalakshmi r'aaphalaatSSi:mi:
+phoneme ph
+  vls blb stp asp
+  lengthmod 2
+  Vowelin  f1=0 f2=1000 -500 -300  f3=-200 80
+  Vowelout f1=0 f2=1000 -500 -300  f3=-200 80 brk
+  WAV(ustop/p_asp)
+endphoneme
+
+// TEST: thilibhan t['IlIbhan | suprabhavana s'u:praabhaavana | vishvabhavana v'ISvaabhaavana
+phoneme bh
+  vcd blb stp
+  lengthmod 5
+  Vowelin  f1=2 f2=1000 -500 -300  f3=-200 80
+  Vowelout f1=2 f2=1000 -500 -300  f3=-200 80
+  FMT(b/bh)
+endphoneme
+
+// TEST: tirtharajagat tIth'a:ra:dZaagat | gayathiry g'eIthaIaari: | jithendranath dZ'IthEndraanat[
+phoneme th
+  vls alv stp asp
+  lengthmod 2
+  Vowelin  f1=0 f2=1700 -300 -150  f3=-100 80
+  Vowelout f1=0 f2=1700 -300 -150  f3=-100 80 brk
+  WAV(ustop/t_asp)
+endphoneme
+
+// TEST: dharshidhan d'a:Si:dhan | ksindhuja ksaIndh'u:dZa | hudhayfah h'aadhfa
+phoneme dh
+  vcd alv stp
+  lengthmod 5
+  Vowelin  f1=2 f2=1700 -300 -150  f3=-100 80
+  Vowelout f1=2 f2=1700 -300 -150  f3=-100 80
+  FMT(d/dh)
+endphoneme
+
+// TEST: thamaraichelvi t['amaarakhElvi: | shikhar SIkh'a: | thamaraichelvan t['amaarakhElvan
+phoneme kh
+  vls vel stp asp
+  lengthmod 2
+  Vowelin  f1=0 f2=2300  300  400  f3=0 80
+  Vowelout f1=0 f2=2300  300  400  f3=0 80 brk
+  WAV(ustop/k_asp)
+endphoneme
+
+// TEST: ghorarupa ghO:raar'u:pa | raghudvaha ragh'u:dvaaha: | jayaguhan dZ'eIaagha:n
+phoneme gh
+  vcd vel stp
+  lengthmod 5
+  Vowelin  f1=2 f2=2300  300  400  f3=0 80
+  Vowelout f1=2 f2=2300  300  400  f3=0 80
+  FMT(g/gh)
+endphoneme
+
+
+// ============================================================
+// SECTION 8: ASPIRATED DENTAL STOPS
+// ============================================================
+
+// TEST: erithallal 'i:rIt[hO:lal | sithamparam s'It[hampeIram | kyathampalle kaIt[h'ampal
+phoneme t[h
+  vls dnt stp asp
+  lengthmod 2
+  Vowelin  f1=0 f2=1400 -300 -200  f3=-100 80
+  Vowelout f1=0 f2=1400 -300 -200  f3=-100 80 brk
+  WAV(ustop/t_short)
+endphoneme
+
+// TEST: siddhavel S'i:d[haval | siddhamatre S'i:d[ha:maata | siddhaarth S'i:d[ha:t[
+phoneme d[h
+  vcd dnt stp
+  lengthmod 5
+  Vowelin  f1=2 f2=1400 -300 -200  f3=-100 80
+  Vowelout f1=2 f2=1400 -300 -200  f3=-100 80
+  FMT(d/dr)
+endphoneme
+
+
+// ============================================================
+// SECTION 9: AFFRICATES
+// ============================================================
+
+// TEST: prachi pr'aatSi: | asfaq 'eIEsEfeItSu: | zacarias z'atSeIri:as
+phoneme tS
+  vls pla afr
+  voicingswitch dZ
+  lengthmod 2
+  Vowelin  f1=0 f2=2300  200  400  f3=-100 80
+  Vowelout f1=0 f2=2300  200  400  f3=-100 80 brk
+  WAV(ustop/tS)
+endphoneme
+
+// TEST: arjun 'a:dZun | mangaraj maNgaar'a:dZ | jeylani dZ'EIlaani:
+phoneme dZ
+  vcd pla afr
+  voicingswitch tS
+  lengthmod 5
+  Vowelin  f1=1 f2=2300  200  400  f3=-100 80
+  Vowelout f1=1 f2=2300  200  400  f3=-100 80
+  FMT(d/dZ)
+endphoneme
+
+// TEST: aparichchhedya 'apaarItStShEda | chhandas tSh'andas | ghanachchhavaye g'a:neItStShaavai:
+phoneme tSh
+  vls pla afr asp
+  lengthmod 2
+  Vowelin  f1=0 f2=2300  200  400  f3=-100 80
+  Vowelout f1=0 f2=2300  200  400  f3=-100 80 brk
+  WAV(ustop/tS)
+endphoneme
+
+// TEST: jhoomer dZh'u:mar | jhamir dZh'amIa | jhujhaghne dZh'u:dZha:n
+phoneme dZh
+  vcd pla afr
+  lengthmod 5
+  Vowelin  f1=2 f2=2300  200  400  f3=-100 80
+  Vowelout f1=2 f2=2300  200  400  f3=-100 80
+  FMT(d/dZ)
+endphoneme
+
+// TEST: lakshay laatSS'eI | dharmakshetra d'a:maatSSEtra | ikshita aItSS'i:ta
+phoneme tSS
+  vls pla afr
+  lengthmod 1
+  Vowelin  f1=0 f2=2300  200  400  f3=-100 80
+  Vowelout f1=0 f2=2300  200  400  f3=-100 80 brk
+  WAV(ustop/tS)
+endphoneme
+
+// TEST: luxmipraba laadZZmIpraab'a: | luxcia l'aadZZSa | luxmetha l'aadZZmEt[a
+phoneme dZZ
+  vcd pla afr
+  lengthmod 1
+  Vowelin  f1=1 f2=2300  200  400  f3=-100 80
+  Vowelout f1=1 f2=2300  200  400  f3=-100 80
+  FMT(d/dZ)
+endphoneme
+
+
+// ============================================================
+// SECTION 10: FRICATIVES
+// ============================================================
+
+// TEST: flor flO: | asfaq 'eIEsEfeItSu: | mantraphala m'antraafaala
+phoneme f
+  vls lbd frc
+  voicingswitch v
+  lengthmod 3
+  Vowelout f1=0 f2=1000 -500 -300  f3=-200 80 brk
+  WAV(ufric/f)
+endphoneme
+
+// TEST: diwali dIv'a:li: | rutwik r'aatvIk | thiv t['Iv
+phoneme v
+  vcd lbd frc
+  voicingswitch f
+  lengthmod 3
+  Vowelin  f1=0 f2=1000 -500 -300  f3=-200 80
+  Vowelout f1=0 f2=1000 -500 -300  f3=-200 80
+  FMT(v/v)
+endphoneme
+
+// TEST: suyoug s'u:ju:g | saptahotre saptaah'oUta | sunel s'u:nEl
+phoneme s
+  vls alv frc
+  voicingswitch z
+  lengthmod 3
+  Vowelout f1=0 f2=1700 -300 -150  f3=-100 80 brk
+  WAV(ufric/s)
+endphoneme
+
+// TEST: ziyan z'IaIan | yashodayashase jaSOdaajaaS'eIz | surveysan s'3:veIzan
+phoneme z
+  vcd alv frc
+  voicingswitch s
+  lengthmod 3
+  Vowelin  f1=0 f2=1700 -300 -150  f3=-100 80
+  WAV(ufric/z)
+endphoneme
+
+// TEST: abhishek aabIS'eIk | bharathushan barat[uS'a:n | prachi pr'aatSi:
+phoneme S
+  vls pla frc
+  voicingswitch Z
+  lengthmod 3
+  Vowelout f1=0 f2=2300  200  400  f3=-100 80 brk
+  WAV(ufric/sh)
+endphoneme
+
+// TEST: arjun 'a:dZun | mangaraj maNgaar'a:dZ | jeylani dZ'EIlaani:
+phoneme Z
+  vcd pla frc
+  voicingswitch S
+  lengthmod 3
+  Vowelin  f1=0 f2=2300  200  400  f3=-100 80
+  WAV(ufric/zh)
+endphoneme
+
+// TEST: azhaellil azh'a:ElIl | azhakesh azh'a:tSS | thazhalvannan t['eIzha:vanan
+phoneme zh
+  vcd vel frc
+  lengthmod 3
+  Vowelin  f1=0 f2=2300  200  400  f3=-100 80
+  WAV(ufric/zh)
+endphoneme
+
+// TEST: aparichchhedya 'apaarItStShEda | chhandas tSh'andas | ghanachchhavaye g'a:neItStShaavai:
+phoneme Sh
+  vls pla frc asp
+  lengthmod 3
+  Vowelout f1=0 f2=2300  200  400  f3=-100 80 brk
+  WAV(ufric/sh)
+endphoneme
+
+// TEST: saptahotre saptaah'oUta | helasa h'Elaasa:
+phoneme h
+  vls glt frc
+  lengthmod 3
+  WAV(ufric/h)
+endphoneme
+
+
+// ============================================================
+// SECTION 11: APPROXIMANTS & LATERAL
+// ============================================================
+
+// TEST: kunal k'unal | diwali dIv'a:li: | lakshay laatSS'eI
+phoneme l
+  vcd alv lat
+  ipa l
+  lengthmod 7
+  Vowelin  f1=2 f2=1200 -300 -100  f3=-300 80
+  FMT(l/l)
+endphoneme
+
+// TEST: suyoug s'u:ju:g | yishai j'ISaI | yuktvaa j'u:ktvaa
+phoneme j
+  vcd pal apr
+  ipa j
+  lengthmod 7
+  Vowelin  f1=2 f2=2900  300  400  f3=0 80
+  FMT(j/j)
+endphoneme
+
+// TEST: guadalupe gw'a:daalu:p | miquel m'Ikwal | quince kw'Ins
+phoneme w
+  vcd lbv apr
+  ipa w
+  lengthmod 7
+  Vowelin  f1=2 f2=900  -300 -200  f3=-200 80
+  FMT(w/w)
+endphoneme
+
+
+// ============================================================
+// SECTION 12: RHOTIC — Indian English tap/trill
+// ============================================================
+
+// TEST: prachi pr'aatSi: | rutwik r'aatvIk | bharathushan barat[uS'a:n
+phoneme r
+  liquid rhotic
+  lengthmod 3
+
+  IF prevPh(isNotVowel) AND NOT prevPh(isPause) THEN
+    CALL base1/r
+  ELSE
+    ipa ɾ
+    FMT(r/r)
+  ENDIF
+endphoneme
+
+
+// ============================================================
+// SECTION 13: GEMINATES
+// Geminate (long) consonants — common in South Indian names
+// Modelled with lengthmod 1 (shorter) to double with adjacent
+// ============================================================
+
+// TEST: onnika Onn'Ika | shrianahata Sr'i:aannaaa:ta | tatyanna t'aata:nna
+phoneme nn
+  vcd alv nas
+  ipa nː
+  lengthmod 1
+  Vowelin  f1=0 f2=1500 -300 -200  f3=-100 80
+  Vowelout f1=0 f2=1500 -300 -200  f3=-100 80 brk
+  FMT(nasal/n)
+endphoneme
+
+// TEST: meiammai maIamm'eI | ammaiappan ammEj'a:pan | aimmi 'eImmi:
+phoneme mm
+  vcd blb nas
+  ipa mː
+  lengthmod 1
+  Vowelin  f1=0 f2=1000 -500 -300  f3=-200 80
+  Vowelout f1=0 f2=1000 -500 -300  f3=-200 80 brk
+  FMT(nasal/m)
+endphoneme
+
+// TEST: kalleigh k'alli: | quetzalli tS'Etsaalli: | mikaella mItS'eIaalla
+phoneme ll
+  vcd alv lat
+  ipa lː
+  lengthmod 1
+  Vowelin  f1=2 f2=1200 -300 -100  f3=-300 80
+  FMT(l/l)
+endphoneme
+
+// TEST: rrathnadevi rrat[naad'eIvi: | andrra 'a:ndrra | rrajamohan rr'a:dZaamoUha:n
+phoneme rr
+  liquid rhotic
+  ipa rː
+  lengthmod 1
+  FMT(r/r)
+endphoneme
+
+// TEST: vittagen v'IttaadZan | dattatray dattaatr'eI | ashvattha 'aSvaatt[a
+phoneme tt
+  vls alv stp
+  lengthmod 1
+  Vowelin  f1=0 f2=1700 -300 -150  f3=-100 80
+  Vowelout f1=0 f2=1700 -300 -150  f3=-100 80 brk
+  WAV(ustop/t)
+endphoneme
+
+// TEST: addai addaI'i: | agdjg 'aagddZg | shrisiddhariddh SraIS'i:d[a:aIdd
+phoneme dd
+  vcd alv stp
+  lengthmod 1
+  Vowelin  f1=1 f2=1700 -300 -150  f3=-100 80
+  Vowelout f1=1 f2=1700 -300 -150  f3=-100 80
+  FMT(d/d)
+endphoneme
+
+// TEST: karthickk k'a:t[Ikk | sakchan s'eIkkan | kirithickkumar tSIrIt[Ikk'u:ma:
+phoneme kk
+  vls vel stp
+  lengthmod 1
+  Vowelin  f1=0 f2=2300  300  400  f3=0 80
+  Vowelout f1=0 f2=2300  300  400  f3=0 80 brk
+  WAV(ustop/k)
+endphoneme
+
+// TEST: manggaurdi maNggaauaad'i: | kalinggai k'aalINggaI | thaniggairaj t[anIggaIr'a:dZ
+phoneme gg
+  vcd vel stp
+  lengthmod 1
+  Vowelin  f1=1 f2=2300  300  400  f3=0 80
+  Vowelout f1=1 f2=2300  300  400  f3=0 80
+  FMT(g/g)
+endphoneme
+
+// TEST: thoppadi t[Opp'adi: | ppahlad pp'a:lad | deppak d'Ippak
+phoneme pp
+  vls blb stp
+  lengthmod 1
+  Vowelin  f1=0 f2=1000 -500 -300  f3=-200 80
+  Vowelout f1=0 f2=1000 -500 -300  f3=-200 80 brk
+  WAV(ustop/p)
+endphoneme
+
+// TEST: abbigail abbIg'eIl | subbaram s'aabbeIram | subbalakshmi s'aabbalaatSSi:mi:
+phoneme bb
+  vcd blb stp
+  lengthmod 1
+  Vowelin  f1=1 f2=1000 -500 -300  f3=-200 80
+  Vowelout f1=1 f2=1000 -500 -300  f3=-200 80
+  FMT(b/b)
+endphoneme
+
+// TEST: lakshay laatSS'eI | dharmakshetra d'a:maatSSEtra | ikshita aItSS'i:ta
+phoneme SS
+  vls pla frc
+  lengthmod 1
+  Vowelout f1=0 f2=2300  200  400  f3=-100 80 brk
+  WAV(ufric/sh)
+endphoneme
+
+// TEST: luxmipraba laadZZmIpraab'a: | luxcia l'aadZZSa | luxmetha l'aadZZmEt[a
+phoneme ZZ
+  vcd pla frc
+  lengthmod 1
+  Vowelin  f1=0 f2=2300  200  400  f3=-100 80
+  WAV(ufric/zh)
+endphoneme
+
