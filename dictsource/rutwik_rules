@@ -1028,164 +1028,164 @@ propag) an (d      'an
      &) ap (y_     @p
 
 .group ar
-        ar         A@
-     X) ar ($w_alt3+++++ @r
-        ar (_      A@
-     &) ar (K_$w_alt2+ 3
-        ar (o      ar
-     _) ar (A      ar
-     _) ar (os     a#r
-     _) ar (ou     a#r
-        ar (a      ar
-        ar (a_     'A@r
-     _) arach      a#rak
-        ar (r      a
-        arr (_     A@
-     _) arr (@     a#r
-     _) arr (ant   ar
-    _n) arr (at    a#r
-     _) arr (o     ar
-     _) arro (g    ar@
-        arr (o_    A@
-        ar (i_     'A@r
-?3   @) ar (io_    'ar
-    _b) ar (L02t   ar
-     c) ar (i      ar
-        ar (ious   e@
-    cl) ar (i      ar
-        aring      e@r-I2N
-     g) aring      @r-I2N
-calend) ar         3
-    &g) ar (_      3
-    &l) ar (_      %3
-    &l) ar (ist    3
-    &m) ar (_      3
-    an) ar (_      3
-   lun) ar (_      =3
-  _sep) ara (b     3r@
-    _p) ara        ar@
-    qu) ar (a      0r
-    _p) ara (de    @reI
-    &t) ar (_      3
-    st) ar (_      A@
-  guit) ar         'A@
-    _t) ar (_      A@
-     &) ar (diL06  3
-    %C) ar (d_     3
-    &d) ar (d      3
-   &ch) ar (d      3
-    &k) ar (d_     3
-    ll) ar (d_     A@
-    &p) ar (d_     3
-   &st) ar (d_     3
-    &w) ar (d_     %3
-    aw) ar (d      O@
-   eot) ar (d_     A@
-    &z) ar (d      3
-     h) ar (ass    @r
-    _h) ar (ang    a#r
-    &m) aran       @ran
-   sep) ar (at     3r
-     w) are        e@
-     k) ar (y      ar
-    _m) ar (y      e@
-     c) arbo (h    ,A@boU
-     _) arch (@P4  ,A@tS     // prefix
-     _) archai     A@k'eII
-     _) archa (iL06e A@keI
-     _) arch (AA   A@k
-     _) arch (er   A@tS
-     _) arch (et   A@k
-     _) archi (@   A@kI
-     _) archiv (+  A@kaIv
-     @) arch (y    A@k
-     @) arch (i    A@k
-    an) arch       3k
-   mon) arch       3k
-  bern) ar (d      3
-     &) ar (dy_    3
-     h) ar (dy_    A@
-        are        e@
-        ar (ez_    @r
-     z) are (_     'A@reI
-    %C) ared (_    3d
-        are (C%A_  3'E
-    %C) aring (_   3rI2N
-        area       'e@ri@
-        arest (_   e@rI2st
-        ar (en     ar
-     p) are (nthe  @rE
-     c) ar (eer    @r
-     c) are (C@    e@
-     p) aren (t    e@r@n
-    pp) ar (enC    ar
-   nsp) ar (enC    ar
-        ar' (nt    A@
-        ar (et     ar
-        ar (iaB_   'e@
-        ar (ia_    'e@
-     @) arily (_   'ErI#l%i
-?3   @) arily (_   'e@rI#l%i
-    ch) ar (it     ar
-    ph) ar (i      ar
-     m) ar (i      @r
-    _m) ar (i      ar
-     m) ar (in     @r
-    _m) ar (inaC   ar
-     m) ar (iner   ar
-     m) ar (io     ar
-   htm) ar         e@
-        ar (ic     ar
-     &) arise (_   @raIz
-     &) arize (_   @raIz
-     &) ar (iL06ation @r
-     u) ar (ish    e@r
-?3   _) ar (istocrat a#r
-   log) ar (i      @r
-  marg) ar (AtA_   3r'
-    _l) ar (yn     ar
-     m) ar (it     ar
-     p) ar (i      ar
-     p) ar (in     e@
-     &) ar (in_    @r
-     &) ar (is_    'A@
-  _kat) ar (@      @r
-     v) ar (iA     e@r
-     @) ar (ity    ar
-        ar (iu+    'e@r
-    _p) arlia      A@l@
-     @) ar (ol     @r
-        arom (at   a#roUm
-     &) ar (ous_   3
-        arre (_    A@
-        arred (_   A@d
-        arring (_  A@I2N
-    qu) ar (r      0
-     _) arseno (P6     ,A@s@noU
-     p) ar (ticu   3
-    qu) ar (t      O@
-     _) ar (ticu   %A@
-     _) ar (til    %A@
-     &) ary (_     @r%i
-?3 @@AC) ary (_     e@ri
-?3   r) ary (_     e@ri
-?3 @@A) ary (_     e@ri
-?3 ion) ary (_     Er%i
-    XC) ary (_     e@r%i
-     w) ar         O@
-   _wh) ar         O@
-     w) ar (r      0
-     w) ar (i      e@
-     w) ar (y      e@
-     w) ar (r      0
-     w) ar (d      3
-     w) arw (i     0r
-   rew) ar (d      O@
-   tow) ar (d      o@
-    _w) ar (d      O@
-    sw) ar (d      O@
-   chw) ar (d      O@
-     &) arye (_    3ri
+        ar         A:r          // car, bar, far, jar [was A@]
+     X) ar ($w_alt3+++++ @r     // ✅ unchanged
+        ar (_      A:r          // star, radar [was A@]
+     &) ar (K_$w_alt2+ 3        // ✅ unchanged (unstressed suffix contexts)
+        ar (o      ar           // ✅ unchanged
+     _) ar (A      ar           // ✅ unchanged
+     _) ar (os     a#r          // ✅ unchanged
+     _) ar (ou     a#r          // ✅ unchanged
+        ar (a      ar           // ✅ unchanged
+        ar (a_     'A:r         // tiara, sonata [was 'A@r — glide removed]
+     _) arach      a#rak        // ✅ unchanged
+        ar (r      a            // ✅ unchanged
+        arr (_     A:r          // bizarre [was A@]
+     _) arr (@     a#r          // ✅ unchanged
+     _) arr (ant   ar           // ✅ unchanged
+    _n) arr (at    a#r          // ✅ unchanged
+     _) arr (o     ar           // ✅ unchanged
+     _) arro (g    ar@          // ✅ unchanged
+        arr (o_    A:r          // arrow [was A@]
+        ar (i_     'A:r         // ✅ already had r, kept
+?3   @) ar (io_    'ar          // ✅ unchanged
+    _b) ar (L02t   ar           // ✅ unchanged
+     c) ar (i      ar           // ✅ unchanged
+        ar (ious   er           // various, nefarious [was e@]
+    cl) ar (i      ar           // ✅ unchanged
+        aring      erI2N        // daring, caring [was e@r-I2N]
+     g) aring      @rI2N        // ✅ unchanged
+calend) ar         @r           // calendar [was 3]
+    &g) ar (_      @r           // sugar, vulgar [was 3]
+    &l) ar (_      %@r          // polar, solar [was %3]
+    &l) ar (ist    @r           // ✅ [was 3]
+    &m) ar (_      @r           // grammar, glamour [was 3]
+    an) ar (_      @r           // sonar, lunar [was 3]
+   lun) ar (_      =@r          // lunar [was =3]
+  _sep) ara (b     3r@          // ✅ unchanged
+    _p) ara        ar@          // ✅ unchanged
+    qu) ar (a      0r           // ✅ unchanged
+    _p) ara (de    @reI         // ✅ unchanged
+    &t) ar (_      @r           // altar, nectar [was 3]
+    st) ar (_      A:r          // star [was A@]
+  guit) ar         'A:r         // guitar [was 'A@]
+    _t) ar (_      A:r          // tar [was A@]
+     &) ar (diL06  @r           // regardless [was 3]
+    %C) ar (d_     @r           // standard [was 3]
+    &d) ar (d      @r           // standard [was 3]
+   &ch) ar (d      @r           // orchard [was 3]
+    &k) ar (d_     @r           // awkward [was 3]
+    ll) ar (d_     A:r          // bollard [was A@]
+    &p) ar (d_     @r           // leopard [was 3]
+   &st) ar (d_     @r           // custard, mustard [was 3]
+    &w) ar (d_     %@r          // toward [was %3]
+    aw) ar (d      O@           // ✅ unchanged
+   eot) ar (d_     A:r          // leotard [was A@]
+    &z) ar (d      @r           // blizzard, buzzard [was 3]
+     h) ar (ass    @r           // ✅ unchanged
+    _h) ar (ang    a#r          // ✅ unchanged
+    &m) aran       @ran         // ✅ unchanged
+   sep) ar (at     3r           // ✅ unchanged
+     w) are        er           // ware,ware [was e@]
+     k) ar (y      ar           // ✅ unchanged
+    _m) ar (y      er           // Mary [was e@]
+     c) arbo (h    ,A:rboU      // carbohydrate [was ,A@boU]
+     _) arch (@P4  ,A:rtS       // arch- prefix [was ,A@tS]
+     _) archai     A:rk'eII     // archaic [was A@k'eII]
+     _) archa (iL06e A:rkeI     // [was A@keI]
+     _) arch (AA   A:rk         // archangel [was A@k]
+     _) arch (er   A:rtS        // archer [was A@tS]
+     _) arch (et   A:rk         // [was A@k]
+     _) archi (@   A:rkI        // archive [was A@kI]
+     _) archiv (+  A:rkaIv      // archive [was A@kaIv]
+     @) arch (y    A:rk         //archy [was A@k]
+     @) arch (i    A:rk         // [was A@k]
+    an) arch       3k           // ✅ unchanged (anarchy)
+   mon) arch       3k           // ✅ unchanged (monarch)
+  bern) ar (d      @r           // Bernard [was 3]
+     &) ar (dy_    @r           // hardy [was 3]
+     h) ar (dy_    A:r          // hardy [was A@]
+        are        er           // care, bare, dare [was e@]
+        ar (ez_    @r           // ✅ unchanged
+     z) are (_     'A:reI       // [was 'A@reI]
+    %C) ared (_    @rd          // cared, dared [was 3d]
+        are (C%A_  3'E          // ✅ unchanged
+    %C) aring (_   @rI2N        // caring, daring [was 3rI2N]
+        area       'eri@        // area [was 'e@ri@]
+        arest (_   erI2st       // rarest,arest [was e@rI2st]
+        ar (en     ar           // ✅ unchanged
+     p) are (nthe  @rE          // ✅ unchanged
+     c) ar (eer    @r           // career [was @r — ✅ unchanged]
+     c) are (C@    er           // [was e@]
+     p) aren (t    er@n         // parent [was e@r@n]
+    pp) ar (enC    ar           // ✅ unchanged
+   nsp) ar (enC    ar           // ✅ unchanged
+        ar' (nt    A:r          // [was A@]
+        ar (et     ar           // ✅ unchanged
+        ar (iaB_   'er          // tiara [was 'e@]
+        ar (ia_    'er          // tiara [was 'e@]
+     @) arily (_   'ErI#l%i     // ✅ unchanged
+?3   @) arily (_   'e@rI#l%i    // ✅ unchanged
+    ch) ar (it     ar           // ✅ unchanged
+    ph) ar (i      ar           // ✅ unchanged
+     m) ar (i      @r           // ✅ unchanged
+    _m) ar (i      ar           // ✅ unchanged
+     m) ar (in     @r           // ✅ unchanged
+    _m) ar (inaC   ar           // ✅ unchanged
+     m) ar (iner   ar           // ✅ unchanged
+     m) ar (io     ar           // ✅ unchanged
+   htm) ar         er           // [was e@]
+        ar (ic     ar           // ✅ unchanged
+     &) arise (_   @raIz        // ✅ unchanged
+     &) arize (_   @raIz        // ✅ unchanged
+     &) ar (iL06ation @r        // ✅ unchanged
+     u) ar (ish    er           // Spanish [was e@r]
+?3   _) ar (istocrat a#r        // ✅ unchanged
+   log) ar (i      @r           // ✅ unchanged
+  marg) ar (AtA_   3r'          // ✅ unchanged
+    _l) ar (yn     ar           // ✅ unchanged
+     m) ar (it     ar           // ✅ unchanged
+     p) ar (i      ar           // ✅ unchanged
+     p) ar (in     er           // [was e@]
+     &) ar (in_    @r           // ✅ unchanged
+     &) ar (is_    'A:r         // [was 'A@]
+  _kat) ar (@      @r           // ✅ unchanged
+     v) ar (iA     er           // various [was e@r]
+     @) ar (ity    ar           // ✅ unchanged
+        ar (iu+    'er          // aquarium [was 'e@r]
+    _p) arlia      A:rl@        // parliament [was A@l@]
+     @) ar (ol     @r           // ✅ unchanged
+        arom (at   a#roUm       // ✅ unchanged
+     &) ar (ous_   @r           // glamorous [was 3]
+        arre (_    A:r          // bizarre [was A@]
+        arred (_   A:rd         // scarred [was A@d]
+        arring (_  A:rI2N       // scarring [was A@I2N]
+    qu) ar (r      0            // ✅ unchanged
+     _) arseno (P6 ,A:rs@noU    // [was ,A@s@noU]
+     p) ar (ticu   @r           // particular [was 3]
+    qu) ar (t      O@           // ✅ unchanged
+     _) ar (ticu   %A:r         // articulate [was %A@]
+     _) ar (til    %A:r         // artillery [was %A@]
+     &) ary (_     @r%i         // ✅ unchanged
+?3 @@AC) ary (_     e@ri        // ✅ unchanged
+?3   r) ary (_     e@ri         // ✅ unchanged
+?3 @@A) ary (_     e@ri         // ✅ unchanged
+?3 ion) ary (_     Er%i         // ✅ unchanged
+    XC) ary (_     e@r%i        // ✅ unchanged
+     w) ar         O@           // ✅ unchanged (war, ward)
+   _wh) ar         O@           // ✅ unchanged (wharf)
+     w) ar (r      0            // ✅ unchanged
+     w) ar (i      er           // wary [was e@]
+     w) ar (y      er           // wary [was e@]
+     w) ar (r      0            // ✅ unchanged
+     w) ar (d      3            // ✅ unchanged
+     w) arw (i     0r           // ✅ unchanged
+   rew) ar (d      O@           // ✅ unchanged
+   tow) ar (d      o@           // ✅ unchanged
+    _w) ar (d      O@           // ✅ unchanged
+    sw) ar (d      O@           // ✅ unchanged
+   chw) ar (d      O@           // ✅ unchanged
+     &) arye (_    @ri          // [was 3ri]
 
 .group as
      _) as (@      a#s
