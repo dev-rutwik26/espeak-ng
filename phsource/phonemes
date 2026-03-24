@@ -2081,3 +2081,6 @@ include ph_karakalpak
 
 phonemetable ps base1
 include ph_pashto
+
+phonemetable rutwik en-rp
+include ph_rutwik
