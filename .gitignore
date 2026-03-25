@@ -181,7 +181,7 @@ praat-mod/
 ChangeLog.txt
 License.txt
 ReadMe
-Makefile
+# Makefile
 
 # # emscripten files
 
@@ -192,7 +192,7 @@ emscripten/glue.*
 emscripten/js/*.data
 emscripten/js/*.js
 !emscripten/demo.html
-!emscripten/Makefile
+# !emscripten/Makefile
 !emscripten/js/demo.js
 !emscripten/js/espeakng.js
 
