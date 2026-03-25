@@ -1,39 +1,39 @@
-# editor/external files:
+# # editor/external files:
 
 *~
 .*.swp
 *.bat
 
-# Eclipse project files:
+# # Eclipse project files:
 
 .autotools
 .cproject
 .project
 .settings
 
-# VSCode project files:
+# # VSCode project files:
 .vscode
 
-# intermediate build output:
+# # intermediate build output:
 
 *.o
 *.lo
 
-# android build output:
+# # android build output:
 
 bin/
 obj/
 gen/
 android/icons/*.png
 
-libttsespeak.so
+# libttsespeak.so
 
 android/res/raw/espeakdata.zip
 android/res/raw/espeakdata_version
 
-local.properties
+# local.properties
 
-# android gradle output:
+# # android gradle output:
 .cxx
 .gradle/
 .idea/
@@ -41,26 +41,23 @@ build/
 *.iml
 !gradlew.bat
 
-# emscripten output:
+# # emscripten output:
 a.out
 a.out.js
 
-# autotools
+# # autotools
 
-AUTHORS
-INSTALL
-NEWS
-README
-ChangeLog
+# AUTHORS
+# INSTALL
+# NEWS
+# README
+# ChangeLog
 
 .deps/
 .libs/
 
-Makefile
-Makefile.in
 aclocal.m4
 autom4te.cache/
-compile
 config.*
 configure
 depcomp
@@ -74,7 +71,7 @@ stamp-h1
 m4/*
 !m4/ax_check_compile_flag.m4
 
-# libraries
+# # libraries
 
 docs/speak_lib.h
 
@@ -186,7 +183,7 @@ License.txt
 ReadMe
 Makefile
 
-# emscripten files
+# # emscripten files
 
 emscripten/*.out
 emscripten/*.pkl
@@ -201,8 +198,8 @@ emscripten/js/*.js
 
 # espeak-ng-data
 
-dictsource/dict_log
-dictsource/dict_phonemes
+# dictsource/dict_log
+# dictsource/dict_phonemes
 dictsource/ru_listx
 dictsource/cmn_listx
 dictsource/yue_listx
@@ -211,7 +208,7 @@ phsource/compile_prog_log
 phsource/compile_report
 phsource/error_intonation
 phsource/error_log
-phsource/phonemes.stamp
+# phsource/phonemes.stamp
 
 espeak-ng-data/config
 espeak-ng-data/dictsource
