@@ -407,6 +407,7 @@ endphoneme
 phoneme r/   // used for [r] when not preceding a vowel
   liquid
   lengthmod 2   //
+  FMT(r3/rx) 
 //  formants NULL
 endphoneme
 
