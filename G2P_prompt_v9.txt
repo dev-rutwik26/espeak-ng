@@ -1,0 +1,170 @@
+You are a phonetician specializing in Indian English (IndE). Convert the word list into eSpeak-NG
+en_extra entries. Use full linguistic judgment — reason from the actual pronunciation. Do not
+mechanically apply rules when they produce unnatural output.
+
+== OUTPUT FORMAT ==
+
+    word  phoneme_string  // optional comment
+
+- One entry per line, word lowercase, sorted alphabetically within this batch.
+- Single // comment header at top. Inline // only where non-obvious.
+- Plain UTF-8 only. NEVER use backticks or ``` anywhere. Output must be pasteable as-is.
+
+== PHONEME TABLE — ONLY THESE TOKENS ARE VALID ==
+
+Case is critical. Nothing outside this table exists in the eSpeak English phoneme set.
+
+  STRESS:   '  primary    ,  secondary    %  force-unstressed
+  UTILITY:  |  syllable guard    ||  word break
+
+  VOWELS
+  Token  Sound            IndE use / notes
+  -----  -----            ----------------
+  a      TRAP (short-a)   cat, ankit, bhatt, sakshi — the default short vowel in Indian names
+  A:     PALM (long-aa)   calm, karma, lata, vandana — long aa sound
+  A:r    PALM+r           sharma→'SA:rm@  kumar→kUm'A:r  (rhotic long-aa; NOT A@)
+  @      schwa            unstressed syllables: rahul→rA:'hUl
+  @L     syllabic-l       simple, bottle
+  3:     NURSE            kurta→'k3:tA:  verma→'v3:rmA:
+  E      DRESS            sen→sEn  hegde→'hEgdE  — bare E, NEVER E:
+  I      KIT (short-i)    ankit→'aNkIt  vikram→'vIkr@m
+  i      HAPPY (final-i)  aarti→'A:rti  swati→'swA:ti  prachi→'pratSi  — unstressed final
+  i:     FLEECE (long-ee) deepak→'d|i:p@k  sunita→sun'i:tA:  — stressed long-ee; also rupee→ru:'pi:
+
+  u:     GOOSE (long-oo)  puja→'pu:dZA:  kapoor→k@p'u:r  madhu→m@d'u:
+  U      FOOT (short-oo)  kumar→kUm'A:r  kunal→kUn'A:l
+  O:     THOUGHT (aw)     kaur→kO:r  gaur→gO:r
+  aI     PRICE (eye)      iyer→'aI@r  nayak→n'aIjak  aishwarya→aIS'wA:rj@
+  eI     FACE (day)       nair→neIr  sanjay→'sandZeI  payal→'peIj@l
+  aU     MOUTH (cow)      gaurav→'gaUr@v  gowda→g'aUdA:
+  oU     GOAT (go)        rohit→'roUhIt  modi→'moUdi  onkar→'oUNk@r
+  OI     CHOICE           roy→rOI
+  i@     NEAR             iyer→'aI@r  (use for -eer/-ear endings)
+  e@     SQUARE           care
+  aa  a#  A@  U@  O@  o@  aI@  aU@  3  I2  @L   (available; use when phonetically correct)
+
+  CONSONANTS
+  p  b  t  d  k  g   tS(ch)  dZ(j-sound)   f  v  T(th-thin)  D(th-this)
+  s  z  S(sh)  Z(zh)   h  m  n  N(ng)   l  r  j(glide)  w  x(loch)
+
+== WHAT IS FORBIDDEN (ALL CAUSE COMPILE ERRORS) ==
+
+  NEVER USE   USE INSTEAD  Example
+  ----------  -----------  -------
+  bare A      a / A: / A:r ankit→'aNkIt  NOT 'ANkIt   bhatt→bAt  NOT bA:t
+  H           h            neha→'nEhA:   NOT 'nEH@    sneha→'snEhA:
+  G R K J Y B C F L M P W X  (lowercase versions)
+  U:          u:           kapoor→k@p'u:r   NOT k@p'U:r
+  I:          i:           patil→p@t'i:l    NOT p@t'I:l
+  E:          E            sen→sEn          NOT sE:n
+  bh dh gh jh kh sh ch ng ph th  (aspirate/digraph sequences)
+  →  b  d  g  dZ k  S  tS N  p/f t   (drop aspiration; sh→S; ch→tS; ng→N)
+  T           t            shetty→'SEti     NOT 'SeTi  (T = th-in-thin ONLY)
+  y           j            kavya→k'avj@     NOT k'avy@
+  a: o:       A: O:        lowercase a: and o: are wrong
+  æ ə ː       a  @  :      Unicode chars — do not exist in eSpeak English
+
+== IndE RULES ==
+
+1. Rhotic — always preserve coda r. Use A:r (never A@) for long-aa+r.
+2. Monosyllables — NO stress mark: dal→dA:l  kaur→kO:r  singh→sIN
+3. Multisyllabics — exactly ONE primary stress mark '.
+4. Aspirates — drop aspiration: bh→b  dh→d  gh→g  jh→dZ  kh→k  th→t  sh→S  ch→tS
+5. -ya → j@   -nya → nj@   -jy → dZj   (kavya→k'avj@  ananya→@n'A:nj@  jyoti→'dZjoUti)
+6. iy- onset — "iy" at word start = aI (like "eye"). iyer→'aI@r  iyengar→aI'jENg@r
+7. Final unstressed -i/-ee — use plain i: aarti→'A:rti  swati→'swA:ti  (NOT i:)
+   Exception: stressed final -ee keeps i: — rupee→ru:'pi:  naveen→n@v'i:n
+8. aa- word-initial → A: (long-aa): aarav→'A:r@v  aarti→'A:rti
+
+== VERIFIED EXAMPLES ==
+
+// Indian English pronunciations — en_extra additions
+aarav        'A:r@v
+aarti        'A:rti                   // unstressed final -i; NOT 'A:rti:
+agarwal      @g@r'wA:l
+aishwarya    aIS'wA:rj@               // aI onset; sh→S
+ajay         @dZ'eI
+akash        @k'A:S
+amar         @m'A:r                   // @=schwa; A:r=long-aa+r
+ananya       @n'A:nj@
+ankit        'aNkIt                   // short-a; NOT 'ANkIt
+arjun        'A:rdZUn
+balaji       bA:'ladZi
+bhaskar      b'ask@r                  // bh→b; short-a; @r
+bhatnagar    bat'nag@r                // bh→b; short-a throughout; NOT bAt'nag@r
+bhosle       b'oUsl@ 
+biryani      bIrj'A:ni
+chai         tSaI                     // monosyllable
+chatterjee   tS'at@rdZ|i:
+contractor   k@ntr'akt@r
+crore        kroUr                    // monosyllable
+dal          dA:l                     // monosyllable
+deepak       'd|i:p@k
+gaurav       'gaUr@v                  // aU; NOT gO:r@v
+ghee         gi:                      // gh→g; monosyllable
+gowda        g'aUdA:
+iyer         'aI@r                    // iy→aI; -er→@r; NOT 'aIj@r
+iyengar      aI'jENg@r                // iy→aI; j guards boundary
+iyangar      aI'jaNg@r
+jha          dZA:                     // jh→dZ; monosyllable
+joshi        dZ'oUSi
+jyoti        'dZjoUti                 // jy→dZj
+kapoor       k@p'u:r                  // u: NOT U:
+karthik      'kA:rtIk
+kaur         kO:r                     // monosyllable; O:+r
+kavya        k'avj@                   // -vya→vj@
+kulkarni     kUl'karni                // short-a in -kar-
+kumar        kUm'A:r                  // U=FOOT; A:r=long-aa+r
+lakh         lA:k                     // monosyllable
+masala       m@s'A:l@
+mishra       'mISrA:
+mukherjee    mU'k3:dZ|i:              // kh→k
+namaste      n@m@st'eI
+narayanan    n@r'A:j@n@n
+nayak        n'aIjak                  // ay→aI
+nayar        n'aIj@r                  // ay→aI; -yar→j@r
+neha         'nEhA:                   // h not H
+onkar        'oUNk@r                  // oU not bare o
+patil        p@t'i:l                  // i: not I:
+payal        'peIj@l                  // eI; NOT paIj@l
+pillai       pI'laI
+prachi       'pratSi                  // final plain i
+preeti       'pri:ti                  // stressed i: middle; plain i end
+raghav       'rA:g@v                  // gh→g
+rahul        rA:'hUl
+rajesh       rA:'dZES
+rathod       rat'oUd                  // th→t
+rekha        r'EkA:                  // kh→k
+ritu         'ri:tu:
+rohit        'roUhIt
+rupee        ru:'pi:                  // stressed final i: kept
+sagar        'sag@r                   // short-a; @r
+sakshi       'sakSi
+sanjay       'sandZeI
+saraswathi   s@r@sw'A:ti              // th→t; plain final i
+saree        'sA:ri:
+sarita       s@r'i:tA:
+sen          sEn                      // monosyllable; bare E; NOT sE:n
+shankar      S'aNk@r                  // sh→S; N before k; @r
+sharma       'SA:rm@                  // sh→S; A:r rhotic
+sheetal      'Si:t@l
+shetty       'SEti                    // plain t; NEVER T
+shreya       'SreIjA:
+sidhu        s'IdU                    // dh→d
+singh        sIN                      // monosyllable
+solanki      s'oUlaNki
+subramanian  sUbr@m'A:nj@n
+sunita       sUn'i:tA:                // i: not I:
+swati        'swA:ti                  // plain final i; NOT 'swA:ti:
+vandana      v@nd'@nA:
+venkatesh    vENk@t'ES
+vyas         vjA:s
+yash         jA:S                     // monosyllable
+
+== TASK ==
+
+Output ONLY the dictionary entries (single // header + entries).
+No prose, no explanation, no code fences, no backticks.
+
+WORDS:
+[INSERT YOUR ~100 WORDS HERE, ONE PER LINE]
